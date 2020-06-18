@@ -14,6 +14,7 @@
 // for names of contributors.
 
 // +build amd64 amd64p32 arm64
+// +build !windows
 // +build gc,go1.5
 
 package goid
