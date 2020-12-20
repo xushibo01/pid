@@ -1,13 +1,6 @@
-// +build gc,go1.13,!go1.16
+// +build gc,go1.13,!go1.17
 
 package goid
-
-type mutex struct {
-	// Futex-based impl treats it as uint32 key,
-	// while sema-based impl as M* waitm.
-	// Used to be a union, but unions break precise GC.
-	key uintptr
-}
 
 type p struct {
 	id int32 // Here is pid
