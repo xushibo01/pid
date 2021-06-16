@@ -1,4 +1,4 @@
-// +build gc,go1.13,!go1.17
+// +build gc,go1.13,!go1.18
 
 package goid
 
