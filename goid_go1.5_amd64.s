@@ -13,6 +13,8 @@
 // permissions and limitations under the License. See the AUTHORS file
 // for names of contributors.
 
+// This file may have been modified by CloudWeGo authors. (“CloudWeGo Modifications”). All CloudWeGo Modifications are Copyright 2021 CloudWeGo authors.
+
 // Assembly to mimic runtime.getg.
 
 // +build amd64 amd64p32

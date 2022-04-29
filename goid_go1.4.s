@@ -2,6 +2,8 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
+// This file may have been modified by CloudWeGo authors. (“CloudWeGo Modifications”). All CloudWeGo Modifications are Copyright 2021 CloudWeGo authors.
+
 // Assembly to get into package runtime without using exported symbols.
 // See https://github.com/golang/go/blob/release-branch.go1.4/misc/cgo/test/backdoor/thunk.s
 

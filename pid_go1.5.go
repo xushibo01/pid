@@ -13,9 +13,13 @@
 // permissions and limitations under the License. See the AUTHORS file
 // for names of contributors.
 
+// This file may have been modified by CloudWeGo authors. (“CloudWeGo Modifications”). All CloudWeGo Modifications are Copyright 2021 CloudWeGo authors.
+
+//go:build (amd64 || amd64p32 || arm64) && !windows && gc && go1.5
 // +build amd64 amd64p32 arm64
 // +build !windows
-// +build gc,go1.5
+// +build gc
+// +build go1.5
 
 package goid
 
