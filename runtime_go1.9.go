@@ -1,5 +1,3 @@
-// This file may have been modified by CloudWeGo authors. (“CloudWeGo Modifications”). All CloudWeGo Modifications are Copyright 2021 CloudWeGo authors.
-
 //go:build gc && go1.9
 // +build gc,go1.9
 
