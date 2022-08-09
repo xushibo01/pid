@@ -14,6 +14,7 @@
 // for names of contributors.
 
 //go:build gc && go1.19 && !go1.20
+// +build gc,go1.19,!go1.20
 
 package goid
 
