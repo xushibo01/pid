@@ -13,8 +13,8 @@
 // permissions and limitations under the License. See the AUTHORS file
 // for names of contributors.
 
-//go:build gc && go1.19 && !go1.22
-// +build gc,go1.19,!go1.22
+//go:build gc && go1.19 && !go1.23
+// +build gc,go1.19,!go1.23
 
 package goid
 
