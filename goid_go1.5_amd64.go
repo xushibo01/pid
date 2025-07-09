@@ -22,24 +22,30 @@ package goid
 
 // func Get() int64
 
+
+//go:build !windows && !plan9
+// +build !windows,!plan9
+
+package pid
+
 import (
     "bytes"
     "runtime"
     "strconv"
 )
 
-func GetGoID() int64 {
+// Get returns the ID of the current goroutine.
+// NOTE: This is a hack and not officially supported by Go.
+func Get() int {
     var buf [64]byte
     n := runtime.Stack(buf[:], false)
-    // 栈信息格式类似： "goroutine 123 [running]:\n"
-    fields := bytes.Fields(buf[:n])
-    if len(fields) < 2 {
-        return -1
-    }
-    id, err := strconv.ParseInt(string(fields[1]), 10, 64)
+    stack := bytes.TrimPrefix(buf[:n], []byte("goroutine "))
+    idField := stack[:bytes.IndexByte(stack, ' ')]
+    id, err := strconv.Atoi(string(idField))
     if err != nil {
         return -1
     }
     return id
 }
+
 
