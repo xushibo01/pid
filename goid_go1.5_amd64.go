@@ -20,4 +20,26 @@
 
 package goid
 
-func Get() int64
+// func Get() int64
+
+import (
+    "bytes"
+    "runtime"
+    "strconv"
+)
+
+func GetGoID() int64 {
+    var buf [64]byte
+    n := runtime.Stack(buf[:], false)
+    // 栈信息格式类似： "goroutine 123 [running]:\n"
+    fields := bytes.Fields(buf[:n])
+    if len(fields) < 2 {
+        return -1
+    }
+    id, err := strconv.ParseInt(string(fields[1]), 10, 64)
+    if err != nil {
+        return -1
+    }
+    return id
+}
+
